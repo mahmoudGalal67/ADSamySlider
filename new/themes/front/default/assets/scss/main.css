@@ -617,13 +617,15 @@ a {
   .marketingSwiper .swiper-slide {
     height: 100%;
     padding: 0;
+    width: 70vw !important;
   }
   .marketingSwiper .swiper-slide > div {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 24px;
   }
   .marketingSwiper .swiper-slide img {
     height: 90%;
@@ -633,7 +635,7 @@ a {
   }
 
   .marketingSwiper .swiper-slide-active img {
-    transform: translateY(0);
+    transform: translateY(-18px);
     border: 4px solid white;
     border-radius: 40px;
   }
@@ -642,6 +644,8 @@ a {
 @media only screen and (max-width: 767px) {
   .slide-row {
     flex-direction: column-reverse;
+    justify-content: center;
+    gap: 12px;
   }
 }
 
@@ -652,6 +656,10 @@ a {
   font-family: "Poppins", sans-serif;
   transition: all 0.5s;
   accent-color: #172b43;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -10px;
 }
 
 .marketingSwiper-pagination .swiper-pagination-bullet {

@@ -61,6 +61,7 @@
             <div class="col-md-7">
               <div
                 class="slider-content d-flex flex-column justify-content-center align-items-start h-100 ps-md-5"
+                style="overflow-y: hidden"
               >
                 <h2 class="text-white fs-1 pb-2">ADSAMY Marketing</h2>
                 <p class="text-white pb-2">
@@ -81,7 +82,7 @@
                 <div class="swiper-slide">
                   <div class="">
                     <img
-                      src="/new/uploads/images/intro_slides/253965401-1722943406.png"
+                      src="/new/uploads/images/intro_slides/sliderImg0.png"
                       alt=""
                     />
                   </div>
@@ -89,7 +90,7 @@
                 <div class="swiper-slide">
                   <div class="">
                     <img
-                      src="/new/uploads/images/intro_slides/816089221-1722844525.png"
+                      src="/new/uploads/images/intro_slides/sliderImg1.png"
                       alt=""
                     />
                   </div>
@@ -97,7 +98,7 @@
                 <div class="swiper-slide">
                   <div class="">
                     <img
-                      src="/new/uploads/images/intro_slides/522638138-1722844645.png"
+                      src="/new/uploads/images/intro_slides/sliderImg2.png"
                       alt=""
                     />
                   </div>
@@ -105,7 +106,7 @@
                 <div class="swiper-slide">
                   <div class="">
                     <img
-                      src="/new/uploads/images/intro_slides/770054153-1722844711.png"
+                      src="/new/uploads/images/intro_slides/sliderImg3.png"
                       alt=""
                     />
                   </div>
@@ -113,7 +114,7 @@
                 <div class="swiper-slide">
                   <div class="">
                     <img
-                      src="/new/uploads/images/intro_slides/159770829-1722943792.png"
+                      src="/new/uploads/images/intro_slides/sliderImg4.png"
                       alt=""
                     />
                   </div>
@@ -152,85 +153,85 @@
 
     <script>
       var swiper = new Swiper(".marketingSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
+        slidesPerView: 3,
+        spaceBetween: 20,
         loop: true,
-
+        allowSlidePrev: false,
+        centeredSlides: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
-        breakpoints: {
-          "@0.00": {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          "@1.50": {
-            slidesPerView: 2,
-            spaceBetween: 50,
-          },
         },
       });
 
       swiper.on("realIndexChange", function (e) {
         const wrapper = document.querySelector(".slider-wrapper");
         const slider_content = document.querySelector(".slider-content");
+        const slider_wrapper = document.querySelector(".swiper-wrapper");
+        // slider_wrapper.style.transform = `translateX(-20+ ${e.realIndex}*20% !important)`;
+
         if (e.realIndex == 0) {
-          slider_content.innerHTML = `<div 
-                data-aos="fade-down"
-          > <h2 class="text-white fs-1 pb-2">
-                ADSAMY Marketing
-              </h2>
-              <p class="text-white pb-2">
-              
-									At Adsamy Marketing, we specialize in crafting innovative, high-impact marketing solutions for luxury brands. Our team is dedicated to helping businesses stand out in the competitive market through tailored strategies, cutting-edge digital advertising, and top-tier brand development. 
-Adsamy ensures your brand reaches its full potential with style and precision. We focus on results that resonate, positioning your brand as a leader in its industry.								
-              </p>
-              <a class="btn click-btn text-white" href="#">click here</a>
-              </div>`;
+          slider_content.innerHTML = `<div
+                      data-aos="fade-down"
+                > <h2 class="text-white fs-1 pb-2">
+                      ADSAMY Marketing
+                    </h2>
+                    <p class="text-white pb-2">
+
+      									At Adsamy Marketing, we specialize in crafting innovative, high-impact marketing solutions for luxury brands. Our team is dedicated to helping businesses stand out in the competitive market through tailored strategies, cutting-edge digital advertising, and top-tier brand development.
+      Adsamy ensures your brand reaches its full potential with style and precision. We focus on results that resonate, positioning your brand as a leader in its industry.
+                    </p>
+                    <a class="btn click-btn text-white" href="#">click here</a>
+                    </div>`;
         } else if (e.realIndex == 1) {
-          slider_content.innerHTML = `<div 
-                data-aos="fade-down">
-                <h2 class="text-white fs-1 pb-2">
-                ADSAMY Media
-              </h2>
-              <p class="text-white pb-2">
-              
-									Adsamy Media is a leading agency focused on creating powerful advertising strategies that engage audiences and drive brand success. Our expertise lies in providing customized advertising solutions that enhance brand presence
-With a focus on creativity, innovation, and strategic execution, we ensure your message not only reaches but resonates with your target audience. From high-impact video production to dynamic social media campaigns, AD SAMY Media is dedicated to helping your brand stand out in a competitive world.								
-              </p>
-              <a class="btn click-btn text-white" href="#">click here</a></div>`;
+          slider_content.innerHTML = `<div
+                      data-aos="fade-down">
+                      <h2 class="text-white fs-1 pb-2">
+                      ADSAMY Media
+                    </h2>
+                    <p class="text-white pb-2">
+
+      									Adsamy Media is a leading agency focused on creating powerful advertising strategies that engage audiences and drive brand success. Our expertise lies in providing customized advertising solutions that enhance brand presence
+      With a focus on creativity, innovation, and strategic execution, we ensure your message not only reaches but resonates with your target audience. From high-impact video production to dynamic social media campaigns, AD SAMY Media is dedicated to helping your brand stand out in a competitive world.
+                    </p>
+                    <a class="btn click-btn text-white" href="#">click here</a></div>`;
         } else if (e.realIndex == 2) {
-          slider_content.innerHTML = `<div 
-                data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
-                ADSAMY Events
-              </h2>
-              <p class="text-white pb-2">
-               
-									Adsamy Events is an expert in the art of planning, organizing, and executing events with precision and creativity. From corporate conferences and product launches to weddings and special celebrations, effective event management ensures that every aspect of the event flows smoothly. This includes coordinating vendor management, overseeing budgets, and designing unique experiences that align with the client’s vision. We excel in this field, setting the standard for excellence in event management. Our dedicated team ensures that every detail is handled flawlessly while creating extraordinary, memorable events that stand out from the rest. With AD SAMY, your event isn’t just managed; it’s mastered.
-								
-              </p>
-              <a class="btn click-btn text-white" href="#">click here</a></div>`;
+          slider_content.innerHTML = `<div
+                      data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
+                      ADSAMY Events
+                    </h2>
+                    <p class="text-white pb-2">
+
+      									Adsamy Events is an expert in the art of planning, organizing, and executing events with precision and creativity. From corporate conferences and product launches to weddings and special celebrations, effective event management ensures that every aspect of the event flows smoothly. This includes coordinating vendor management, overseeing budgets, and designing unique experiences that align with the client’s vision. We excel in this field, setting the standard for excellence in event management. Our dedicated team ensures that every detail is handled flawlessly while creating extraordinary, memorable events that stand out from the rest. With AD SAMY, your event isn’t just managed; it’s mastered.
+
+                    </p>
+                    <a class="btn click-btn text-white" href="#">click here</a></div>`;
         } else if (e.realIndex == 3) {
-          slider_content.innerHTML = `<div 
-                data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
-               ADSAMY Modeling
-              </h2>
-              <p class="text-white pb-2">
-             
-									At Adsamy Model, our models embody the essence of luxury, elegance, and modern style. Handpicked for their unique charm and professionalism, they set new standards in the world of fashion, beauty, and high-end campaigns. Each model is carefully curated to represent not only their personal brand but also the premium values of the clients we collaborate with. From fashion shows to global advertising campaigns, our models are the epitome of grace, presence, and impact, making every project a work of art.
-								
-              </p>
-              <a class="btn click-btn text-white" href="#">click here</a></div>`;
+          slider_content.innerHTML = `<div
+                      data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
+                     ADSAMY Modeling
+                    </h2>
+                    <p class="text-white pb-2">
+
+      									At Adsamy Model, our models embody the essence of luxury, elegance, and modern style. Handpicked for their unique charm and professionalism, they set new standards in the world of fashion, beauty, and high-end campaigns. Each model is carefully curated to represent not only their personal brand but also the premium values of the clients we collaborate with. From fashion shows to global advertising campaigns, our models are the epitome of grace, presence, and impact, making every project a work of art.
+
+                    </p>
+                    <a class="btn click-btn text-white" href="#">click here</a></div>`;
         } else if (e.realIndex == 4) {
-          slider_content.innerHTML = `<div 
-                data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
-               ADSAMY IT & Software Solutions
-              </h2>
-              <p class="text-white pb-2">
-									At Adsamy Solutions, we offer advanced software applications designed to streamline operations and enhance efficiency for restaurants and offices. Our tailored solutions help businesses improve workflow, manage tasks seamlessly, and enhance customer experiences through advanced technology. Whether you run a restaurant or an office, AD SAMY Solutions provides you with the tools you need to stay ahead in today’s fast-paced environment.
-              </p>
-              <a class="btn click-btn text-white" href="#">click here</a></div>`;
+          slider_content.innerHTML = `<div
+                      data-aos="fade-down"><h2 class="text-white fs-1 pb-2">
+                     ADSAMY IT & Software Solutions
+                    </h2>
+                    <p class="text-white pb-2">
+      									At Adsamy Solutions, we offer advanced software applications designed to streamline operations and enhance efficiency for restaurants and offices. Our tailored solutions help businesses improve workflow, manage tasks seamlessly, and enhance customer experiences through advanced technology. Whether you run a restaurant or an office, AD SAMY Solutions provides you with the tools you need to stay ahead in today’s fast-paced environment.
+                    </p>
+                    <a class="btn click-btn text-white" href="#">click here</a></div>`;
         }
 
         wrapper.style.backgroundImage = `linear-gradient(180deg,rgba(114, 9, 183, 0) 0%,rgba(6, 12, 19, 1) 100%), url(/new/uploads/images/intro_slides/${e.realIndex}.png) `;
