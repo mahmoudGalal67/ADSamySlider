@@ -612,7 +612,7 @@ a {
 
 @media only screen and (max-width: 767px) {
   .slider-wrapper {
-    padding: 28px 0;
+    padding: 8px 0;
   }
   .marketingSwiper .swiper-slide {
     height: 100%;
