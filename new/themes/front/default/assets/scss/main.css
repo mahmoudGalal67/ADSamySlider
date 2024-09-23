@@ -641,6 +641,11 @@ a {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -30px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .slide-row {
     flex-direction: column-reverse;
