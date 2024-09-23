@@ -690,7 +690,7 @@ a {
   .slide-row {
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 12px;
+    gap: 0;
   }
   .swiper-pagination-clickable .swiper-pagination-bullet {
     width: 4px !important;
